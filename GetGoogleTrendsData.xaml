@@ -1,0 +1,181 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetGoogleTrendsData" sap:VirtualizedContainerService.HintSize="492,2690" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="502,2665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Google Trends" sap:VirtualizedContainerService.HintSize="460,2573" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,2357" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT input-254'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="384,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Text="Automation Anywhere" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable Accuracy="1" BrowserURL="https://trends.google.com/trends/?geo=US" DesignTimeRectangle="623, 389, 673, 40" ElementType="InputBox" FriendlyName="'INPUT input-254'" FullSelectorArgument="&lt;webctrl id='input-254' tag='INPUT' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='input-254' tag='INPUT' type='search' aaname='' /&gt;" Guid="ed03e2ba-5a72-4bed-9ff7-419842e898dd" ImageBase64="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" InformativeScreenshot="3ae25f0a615c7e57a3ea41f8950d8195.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'INPUT  input-254'" sap:VirtualizedContainerService.HintSize="384,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f9cde283-b149-4898-8a73-e976acfbd761" InformativeScreenshot="a6d98932cedada5bb4710a914ac00af8" Selector="&lt;webctrl id='input-254' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <Sequence sap:VirtualizedContainerService.HintSize="384,446" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'United States'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?q=UiPath&amp;geo=US" DesignTimeRectangle="408, 309, 111, 27" ElementType="Button" FriendlyName="'United States'" FullSelectorArgument="&lt;webctrl aria-role='button' parentid='compare-pickers-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' parentid='compare-pickers-wrapper' tag='DIV' type='' aaname='    ' check:text='United States' /&gt;" Guid="f8dfe931-016c-45a3-91e4-2938090bf85d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAAfCAYAAADUdfLHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASXSURBVGhD7ZfPayJnGMf7rwwMHpRIqxARAiKCbakLoSxpcthCvLiVsjmsXoTagi3MQSgWSWFjDwvBLhKQbUopllBW2QQKVsjBdIWwZHERioEIrYe5fPvM+86MvyOj8dDh/cKAr++Ped738z4/5h0I2UYCpo0kYNpIAqaNJGDaSFNglhGVJASUpt4eqByVIAUUTPZMUxe13BfYP7vR23ejphK43Yb+KxTjYaw5yFbah+z0Y1v5HR1V77exVgjzBRJuCe7EC72tz4+W9dZiuh1mE9mQDNkfQ7HRRrvdRquiYFOzI3YMfq34/qyacRe2r1orhDmplcNsKghIXqTO9LYutRyFLEWw/1ZrCZhMIzDZwQXwZTGH7XWHHtI+QrrWZWM1L1EC+jpsLM01nwCM5fv1A+wGnXTYRkisUYA2pOKyFEfQKdMcGc5gHJmHG7NhtrII0bitp4MVmNQeOu0O/viGLsKwHeY6fbwqxhFe4/uQHOsDOxa2vY96bht+ZrsEx1oY8dIl7ci6Lo6SSCbnP0vCpE14HqDAQloD32+5ILkTFGDZgAFMXRO3+2ofEdmNnUKDhcT2yxyFRBmR/SvWrZ6l4CM4oVQFraGQORMmHWU56oYke/BhooDT170phzfpmTeHO5DlEFKVFq57PbyupBCSZewcDvK9VduH19T6G4UduCUf0nXWbVndan4qQOM5uljaM8dC2skeXFII2ZbWmA/zZI/gbz3VcxnXeYY8L5SFtsRxjG71Bznw4+GaWwAxL0vgnhktgtjNDRdAkzDVXgftzjD45W1vZUOQvEnUzEWv8PLZM1T++ldvW9csD81XeTxYOsyODBv5b96BtKhYoTa9a+Jh7+DzvWMJcD7MgfrXDTxP34dHpgKI3su3PAmTV967gzCrP4vbTuqWEfPQZXSsIfzJYyg/nuJNn01eQl1U82MwNZfUZR2mcRuXhsn73330Ew9Tww/zEt6/kTnXx3PdBnPSw7hYyDMjxiTMq/0IZFcEmcob8mtNy9puqI/rxm/4QfmMRwr3Jp5MM9ySLnBkgMxXh3L0VJj81rk+/3XsUOpI++j/vRPeXBqmHkbHwaiq+V4WyiyE2bcERZKjKI/TpNzrNe2ahDluFwVMZDaWsf1v/PL1Qzw+HOpVa0h6pzuJZXWryCePCOuopsDUIkSUkrUbmwovPNqtU3z3wEMJncp742QXgMng+JKoUGXZo12r5worNPyxIhrsZjdQoPesP6rgHxpvuQC6OUaM+h3vJ/Hc+M48LSDmp29PymV8zgn2XBJ8yYrpRfW0jy6BUaw0UIz5WYVqXlySVdublDO5t/MCqDWlqLprTYVJptInARURfl52S7IT/nsJlC6HrvwCMNF8gvtaHjFDHl2cWs4s77X3BHcPUDdzi4rOz4mRT5PCVx/Phqmp+ycK8TDe0z8JWM4aWVMzg+dRo1iBeolSPAin9p9mQ7yEbz+l38MFjmXbKQ8rg08TVogd1PUwvhrNgCn0f5SAaSMJmDaSgGkjCZg2koBpIwmYNpKAaSMJmDaSgGkjCZg2koBpIwmYNpKAaSMJmLYR8B8cNS/8zx61XgAAAABJRU5ErkJggg==" InformativeScreenshot="39e68cae11c743458feec3f2616c77de.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Worldwide'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?q=UiPath&amp;geo=US" DesignTimeRectangle="414, 366, 70, 18" FriendlyName="'Worldwide'" FullSelectorArgument="&lt;webctrl parentid='ul-10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ul-10' tag='SPAN' type='' aaname='             Worldwide           ' check:text='Worldwide' /&gt;" Guid="b546283b-504c-41cb-a44f-497ece25cd81" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAWCAYAAABnnAr9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANUSURBVFhH7ZaxS2NBEMbvXxHEQkFBiBAEkRSxEIKIiE1AK4NFmlQBO8HCysZCLGwUsbCxtrJJEy0EG0GwMNhYWIiFzR6/cec5uwlxc54cB++Dxd3J7M4338yu75fLkYRcqETkQiUiFyoR/0So7e1tNzMz41f/BzKhxsbG3M7Ojl99gISGh4fd+/u7tziZDw0NudPTU28ZHF8JdXt7KzH4Oyju7+/d5uamX/XG2tqajEGQCVWtVmVYzM/PC+FWq+Utzl1cXIjt7u7OWwbHTwq1v78vxe10Ot7SjW8Jtbe35yYnJ/3KuZeXFyE7PT0tiSnoOuv3J/hJoVLwLaHoGtsp5+fnch0RkM5S0HU2yNXVlZudnZW9IyMjrlarBVcVX/YsLi5mycdCcV30jNHRUbe1tZX5Ki/bIfDZ2Njwq0/u+Jydncncgnhww768vOwWFhaCHN7e3tzq6qp0IgOf5+dn/+sHMqFIDid9e5rNphym1aXDAN2EeIDf2IPv4+Oju76+duPj4wEJ5uxvNBru5OREzrFCEXdqasqVSiUpEqNSqcge7SgKdnh4KHPtdGwKziuXyzKPhWIf64ODA+F4fHwsnC1HhF9ZWZHfGcS3zQEyoQA/kjQgESWHOBAgCYLe3NyIvV6vZwQVl5eXQZIQWlpakrnCCkXn4v/w8CBroMWxZxALwInz4KRvJ2vOBLFQFMB2H+A8FUrfXG0EQH7Y7DscCEXLczAtjKO2OyQRkG6zlSRZ9sRgL4SBJaWwQjGP37xYKMRRHypPRysnvQkqWiwUcy24wnLizcWn19D4IBBK1aVNbesRnMQgZrvjbwnFPwyLWCi9blQaUSggXLmyCGSL10uo+FPGciL+xMREdu3ssG9tIJQSoqs4QKH2ubm5wJ569foJpcXpd/UAhaNIGo8kECg+PxaKff2unl59GwtYkUAgFEAkNmorKwiIncQUHB4/5sViMSAeJwKsUCmPOWAPNlsoBMB2dHTkLd1CffWYE5/Y8IY/PvgWCgX3+voqPqBLKLrEtrJCicZKp3we9BMKPD09BZ8HEGVuhdJPgHa77S2fotiHOBYK7O7uBp8H6+vrASc+BfTzAB+4kJdFl1A5eiMXKhG5UInIhUpELlQicqGS4NxvHXzAYFk5a1cAAAAASUVORK5CYII=" InformativeScreenshot="8e836e3c9124bf245296430f1405926f.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence sap:VirtualizedContainerService.HintSize="384,446" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Past 12 months'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?q=UiPath&amp;geo=US" DesignTimeRectangle="575, 309, 127, 27" FriendlyName="'Past 12 months'" FullSelectorArgument="&lt;webctrl tag='MD-SELECT-VALUE' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MD-SELECT-VALUE' type='' aaname='' check:text='Past 12 months' /&gt;" Guid="a9ae0fab-c327-4cdb-8189-f381d3fd331b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAfCAYAAADEOX5eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASeSURBVHhe7ZjBayJXHMf7rwwMc1DiIUJSIVSCkOSQhRxKYgq7EC9pQyGHVCjC5mIPcxCKRVzIbg6BkC4h4KGlXVxyUbo9iSDFtEJosxgCRSEe6sHLt7+Zee85M446una7274PzGHezJv5zW8+/t5v/AASCUPKIBFIGSQCKYNEIGWQCDxkqEOPKlAU56bNrWDnaQVddtZbodtG9eUx9IMtrMxpSBTYuKCFsh5HJKCaMaqBCOLZtxzjlBQSlNfBB/pXGS7DJ8doNptsa+DVNw8xr6qIZersvDekriOqRKEPvZwVhyHh1uME1uhlu3NXz8SghjagFxtmnNVn2wgpKrZP79kZ7woFJFzxv18yeAT6cyoMZSmNGtt/I8bK0EOnw3/jg8mkaJAKK1jL3rB9g3ucbL57Sf5PylBLL0EJp+g1GHTx29meWb7NpURbQFwvU+HmdFHJ9ku48QvfO7+mV8wSYczh29ikeMnQRZuqQduxJvRw/oiWi93v2L6Tuh6FEk0i+/gBFjTj3hoW4nnUujXk4xEEVBpTA4jsnODaCJTRrTzFznIAqhGrNoeVvXPHcfN5Hj3B918sW9cwrsuuYd7T/qxRnTLsMWfgvsPzN46riySSyfFbrtR/WwY+ZaBf6S/PsB1SENq/NAO6P92GqsaQohLd7nTwezGFGC0jvETbj/dL+CIOK+ZhH5XBjpcMHrROsKkG8fkL75RZL4aWulQRDYqpYcZM8qjz2NDtYyo2jm7ZpIy5z+c0qywPFAxPpSW3htVDfo0kPZvtGsMqgxKy3dea4zt/Y2iVcp4C8O3iip1ow3cDKX5FLM+9zh2adx2bqda8KHu7DVrPlXASZXHCDX56/hzFX/+ydmctQ68GPaY6XpIbUwbXMme+FMeYtdTw6nK5H4SylqXo+/TKSYRtsZvX2DyhmZxb5NftFWqIDI45Vv6C9GMzGJs/HwyrEO6KwPHZQLY9OnTq5LM7/WWCbVwGtArYnacSZ5TVrQPo377Ca/tFZipDi5IbghrZx4thJhDWMmGVaY75UrzGzJtZuVhKu7skZzz98/s4x4bI4JjD8s7HxuXPFy2Uci4ZvEoCY6Kewc5Nfh1qcB3p4msmijVPyGBC63r1JY71z/BggaShzv+IH56ZDD3UdOOrIoHCCBEM3isZTEbkzzdXuOAi5EpDq6bB1DIMPkwN6SUuw5/44atPcXBqi7xXRpK6fyHLTGQgETKr0LRVZPj6NYLJZZhgmXAF5xybVAYf+ZuEVgm55AVpMZqpZagcLlIHzBucKs52I2a3zdc88z8As3JYDRBvzMR/ALd5rFPDtPmEjjs/CTzwlqFVSFBT9SEOfvzDtqQZ2x06Hm5MI8NgA3mG3YizNxkvwyX2gwoWk0XRZ42WwUf+/gGmlgG9a5zv9T+Llulz62v6rOs3Re5/B5dd/2De4/LLj6AZx4Z8CvbxkoHFSeODm3fFmUoGwtenpStf7rH60ceYN3IVy6BB++NkGJ+/2eMhg+T/ipRBIpAySARSBolAyiARSBkkAimDRCBlkAikDBKBlEEikDJIBFIGiUDKIBFIGSQCKYOEAfwNh+XAjY6oLtsAAAAASUVORK5CYII=" InformativeScreenshot="c3e36c8bc0100e41cb480dbeb00c513a.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click '2004 - present'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?q=UiPath&amp;geo=US" DesignTimeRectangle="567, 698, 95, 18" ElementType="Text" FriendlyName="'2004 - present'" FullSelectorArgument="&lt;webctrl parentid='select_option_23' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='select_option_23' tag='DIV' type='' aaname='     2004 - present   ' check:text='2004 - present' /&gt;" Guid="912927e3-2400-432f-991b-694ad0dbc703" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAWCAYAAADU1CLnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATESURBVGhD7VjPS2NXFO6/8uCSRcI8igHTQGmQwNhCBBfFmoEJmE3aYZgs1E2KdmEXr5CBhkIK6iwCYiUbh1FaSREKwboKQqChBKS1RIQSIUKbxdt8Pe/+eO+++EZnMIvYyQcXXrzn3nvu+c6v63sYY2QwJmOEMCZjhDAmY4QwJmOE4CejW4c1H0eYGTAMhnB8HqVGX04KdOsW5uNhMINkQpOYWTlAV85x+PYIYXJmBQc+AQ12E1aSkVwWu/JP7zI0MlookmHMWQu1dgedzgk20yYMlsZWT4r0tpBmDMlCDe0OyRw9RyrCkCqfKQFspRlYsiD3OMLzVAQsVYaS0NEqJgWp7xwZu8jSvbMDl/bIOC4ganyMkm61XgVz2qLzcgpG5CkObPHbQctKwEhYRCXhvIyUEcFTvwASRgIWF9DQKiLJEshkPhyTIeGR0b8kT76ELynZVWQoXeX2xM/DfATGXIX8X8Nu1jPmYR4RYw4Vv0DAwSIKY4VjNB0y70DGbpYiK7OGskqNLIypJ1WcKn+QzrBcWsJHIZqXivQbG1iYEumWheOYt+pauu2jUZpHPOykUAOhBw/xpHoKz8VsXOyvYGYyFDgvdPoe+0tTXrpeqHCduPPSGneQIyvcWMC7lTkwLRL4IYN06mTo3y6uk3FGEcZiBRy7yt2RDMNEevOEnKmDk+0c4mSA2GpDCHAyyOATj/HNzg52jij0zyiCmbemc1TCrOml295WGowlUai1xZ6baZhGDGpLm5zO1ObbL/N0pon8oTCU0CmE6VWRztu1ZdKBYXb9nM8H2cTBa8mwmxalEZMWeP4yFDK4IWIoOEwQhkJGpqp5LdBYjcGIEtnOD05GlM7jUxxBEd5co3SZLKJN322qZUZ0GXV30zMcEZG13/+l73OUUwai+oZ0ejVDhMsUwnXy7S/WqPlrNpEIJqNLwuQp8by/U7o7GV1U5kR6Uve8kQzp1SqkB492cKtO12pWm1Kkt6dvqNpH989NUIoKPcDDzxZh/fAr/nLz9x5yPPUEDKlHkE7+v70pGbLdNElysCPlHkWdkQo2Dv3ivGakUPYLeAfv5WT3FDwSg1XevsKFk0bkuPR32RxvT0YLVsLA+89eufu64+JKi7A+Lk9+xgvrC1EbzFms8z3EfWa+/e36eqngcMggIorTIYSmi2jqcS/Roxoy2E3xlKA8indfA91UYxUxZQzeJPgv8MuXTjf1CC/o++Iq4NBbwC95a5ryd3N7OfJ6pbOCbcs9/saPX3+OxS1t1q5jOaqcRURWhCzp61Pc9UMho0sL6F3xwSJ++tNvMNdjerQJvSvUO6NdK1Bd8b8zdrP0rlDvjHYNBYqy170zHAylZrA4ctuiGAudtCgLIEPUQ0rDuW2c8DvSm+rxBCaf1fAPzfP3TySFNVWg5T3T8sHVpcgzqWmYteR7i+65Oh3GJ9/9wedvJ+MQ+Qg1Gcs1blsFj4yB/Owbmhf1G6WbX+D9Bkpv+gInDIWMR195Zzqt7dI+LpSbBpDhoFsvua0tX7OwAe+fDV3ULa+1ZeEpLGw0tLbfxml1yW1thR28M28ng9Ra/xQTjr7UNCgEF/B7hKCL31eMyRghjMkYIdx7Mv5PGJMxQhiTMTIA/gN/j86NeerqLAAAAABJRU5ErkJggg==" InformativeScreenshot="b4ebf0011618f2b6e1432d8d6f7a2893.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence sap:VirtualizedContainerService.HintSize="384,446" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Region'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable Accuracy="1" BrowserURL="https://trends.google.com/trends/explore?date=all&amp;q=UiPath" DesignTimeRectangle="1316, 810, 81, 27" FriendlyName="'Region'" FullSelectorArgument="&lt;webctrl id='select_value_label_97' tag='MD-SELECT-VALUE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='select_value_label_97' tag='MD-SELECT-VALUE' type='' aaname='' check:text='Region' /&gt;" Guid="4acc0bd5-3b18-4292-ba9c-320b4cc49a4e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAfCAYAAACWNoFQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN9SURBVGhD7ZexaxpRHMf7rxwcDooOCTRIQyUIVqiDYLFmCcTFIoJDk8VSlywHdTFQKSFS7JCCi4SkVAKSgpAsLYKDgxAwQRFKBjs0wy3f/u7unZ7RswbuNa29D7zhnvfevd/H3/u9uwewsRxbKgdsqRywpXLAlsqBqVIrcQGCMN4c7gA283Vcs3usYlB7gxcv36Mps44FwFzq6it86XbRVVr7DB+zYXgEEX6pCSvj7+2FIYph7PVYxwJgLtUnocWuNWRUUy4IrjRqrMdmOneQCrQkH5UCP3Jt1kHFoC7F4HWK1C/C6Y0h/+2G/aYgo3+8hYDboZWQhzFI+9vwCT5IbHJtzjgq2qWKfFFGMuCGQyk9ohPemIS6oe5o69vBp3ISa8Nnb6J0Yd0eOs3QMwzlz6xFih02YsSdpJ5nlinIBI7UKxlNyU9b14vEQYPKRAP76x76PYoSEyA3d0igAM/6Ls7aXbRPJIQ9ymJmSL0sICTSmLCEExrTbRwg4RUh+qVh3VXXJ5LIJ9s4bNC8Z7tYV+YN5nGp3WIJnWJkTODtljllN95iTqk3uDrJwK8Em65pNbW3hzBdB/OGMOQqUi4BPtWYTPNQFq1kcG5IILm+jWVTqazE3BqDyzyCFESooBVedX2uFKqGe3qFkGEe6zDL2GkZqmMudWIiBx5vHaOvB1KJU5+xFCgMUIrSvXEltBYknwAxoeX1kJY0Y/s3sbMqwEV/3Dg9FEL6vNP+dEJdj/VSKV9RjOgOWDNLUYa5VMPp3/6wAZfgQbo2So3vdGqPPcjY/Dm08RWvV/SsNTBTagVxGj8xhlDXdC9SFU6R0WOLFEnzbObc/izrQoVRzVKDeI53HfbaZWz9H7SRtTETWTdHpi5nztWrEW3k/PcplegUEREypPf3zH1QydUUZasL8cpA61DrnAsb5fHPAbl/NSwRtfRkfbSspv5pqXdgbqkUGfJBY/8ARwnltNdP/y4ah1k63UU8fcs2SCunHW7s9Nd+pzlMpRJmp/+j7FD0AkmlPKql1a+qqP7ONPaeSuXBuTbxKXtd5fWe+o9JtQ4ZsnEbE4NSlIIPge3khYSr1J+fk1haeobsobE80Nam1yxWmRcSzplK5SG/Odz+gsONQLIMC78m/0o4S/0/saVywJbKAVsqB2ypHLClcsCWygFbKgdsqRywpXLAlmo5wC/r46ocsBepowAAAABJRU5ErkJggg==" InformativeScreenshot="be7ebb89810e1450058cad77587846ea.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'City'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?date=all&amp;q=UiPath" DesignTimeRectangle="1309, 873, 27, 19" ElementType="Text" FriendlyName="'City'" FullSelectorArgument="&lt;webctrl parentid='select_option_88' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='select_option_88' tag='DIV' type='' aaname='     City   ' check:text='City' /&gt;" Guid="fd48dd7a-3e76-4cff-8a0e-490b3a0da63f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAXCAYAAADz/ZRUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVEhL7ZW/S8NAFMf9Vw6ODgY7iPhj6lCQDioOEkgHwS6KFBwsCA5djeBgHRQEh0io4FLEpSAOLjqJ4FAw4FCpuCjUpUOWry+9U3OXVkUNCvqFkLx31/u89+7dtQc/qH/4j+iXwf1r7BfGMdLLwRgDS/RhdL6Mq5YcD1RzsTi3guq9tD8pFe5fwk4TNDmJ4t4pvIaH070iJpMMPG3j0pfzTgpIsiQKJ9JGBTkKNFeR5gelwOulDBhPw36hCPlnyxhiHJbblB5dX4bXYKeozKaDKKKG9YkBDC8dCbOSoy1Jwa7RiJ0S2/Py5FCpl5Chb9MJryTW55YrbQUuok8FK76nENx/vEOjsYMs/Ta706DvB7RQRymjJdIOSK3el+FC0bLfbo7RHBPPybdtbiG8c7HB0XRgkk+UvgnHpJLThHA3xQcnoGvRyQlK3w6E07jayJGG06MT6t5wQp3ghHctcCr9xha9jTyq2sIh+OtRW9OSjxy1LvDpfW11n/ycEuIcRr4aSUqBK5fMwQV1bpdLJgI/xoLBYEzvwvNu8Hrx+ajmDZprIK+nTVLhgVpXKM+Poi8hzi3vHcF4QbteI3DamO0p9FOWjM/iUPoCtcpZsA4lDxSFf6tE0xkLx9JWFRPcx+PdBY5WLfoPGELxXLo1xQT3sJamLUgMYsa57nB6hGIu+9v6q3DgCdBnDfPyCgk+AAAAAElFTkSuQmCC" InformativeScreenshot="e080ac31b4270bdeb2c168dbab9a7b97.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <uix:NClick ClickType="Single" DisplayName="Click 'City'" sap:VirtualizedContainerService.HintSize="384,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3347fa2-cda4-4efd-b1da-b795310713a2" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable Accuracy="1" BrowserURL="https://trends.google.com/trends/explore?date=all&amp;q=UiPath" DesignTimeRectangle="1414, 808, 24, 24" FriendlyName="'file_download'" FullSelectorArgument="&lt;webctrl aaname='file_download' idx='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='file_download' type='' tag='I' check:text='file_download' /&gt;" Guid="d48fccca-7a3a-4e31-90da-84c285470043" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACUSURBVEhL7dRNCoAgEIDRLu3StbfwFl4i8BquBbfC1IBE4N9oFhJ+MLvykYkbfNwChzcvaJQAxlg0QpnwBK0FXi2QWhb0dgfJY6A4XMJufVghXfkLnaajJ6ZdeK9QfUspKBHDaP+whDZgGPnQJNFGDKOD2B3twLA2EENU9GFYO/iwecDczVKb2s0zD/hWCxze30GAA+MnfCJkghiTAAAAAElFTkSuQmCC" InformativeScreenshot="36b045f6f780cdfa82b648dfb1089dd5.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1334, 810, 64, 27" FriendlyName="'City'" FullSelectorArgument="&lt;webctrl id='select_value_label_142' tag='MD-SELECT-VALUE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='select_value_label_142' tag='MD-SELECT-VALUE' type='' aaname='' check:text='City' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAfCAYAAABeWmuGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKKSURBVGhD7Zexa9tAFIf7rxwcHiLioZSmmTwYgoemBFwE8hCol5ZgyFBDQYPXqpCh7tBCQYOKcSCLKV0MIZgs6VQCGQwxBOzikqUFZ/Gg5dcn3zmxT1LSJpFxwn1wWHc6HbpP792dH0AzhRaioIUoaCEKWohCvBD/BDvlVSwvcDDGwFKLWNmo43go7we0a3j96i2av2X9HhAtxD+CkyUR6TVUtg/Q6XdwsF3BWpqBZx0c+bLffhlplkZ5X9bRQJHkFRuyegeJFNKr5sB4Fs75zAX+dxtLjMOqDWSLyr0U0oaToRQxPYSn3cb7Z4/w5M2uqDaKlE4ZOG2642REap2XIhq9KnJ0bXqTI4nxuVWLGP/mtOzJd4gvebcrn5gmQoj4yplgllcxIcQ/O0W/76JAzxbcPl3/wRA9VHP0ApNyR5Iui7Kb03XzIQGTxW7JjhHcmhBBOGV+fXxKfUyMg2RU5xYS9DEiLlLiImNM4kIw8GBSm0ibATyT0oU6TK9OSdCFm1eEXBYakuSFkISaRTtWkDYjOZzuJ69D0II9lpF3SdHVxC6q0V8xflEVRAkhJTULnNLmwyf6NUpozspHQNdFntmk5t+IEHKx7W4pQRLadmOErO8oM/apnZNkzmGUmjNIl+sTKWTqYPb1kHaMmINZSMgeNg0GY/0LOp2fuDjA+miWDOproDTT8Ph/ooUEDI9R31jBYkrkIF9YxmpZObqHhFBSfX6OhxQNjL/EN9kWMKwXwGadLtcgXsitIhZWY3NP1ueXhIX4ODs9xO47i/7zLKHyQzbPMQkL6WArS+mTeowX3slcL6ZjZpQydwctREELUdBCFLQQBS1EQQtR0EIUtBAFLURBC5kC+AuUx3Gthgu4dwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:MoveFile ContinueOnError="{x:Null}" Destination="Data2\worldwide_Automation_Anywhere_2004_2021_interest_city.xls" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[&quot;C:\Users\&quot; + System.Environment.UserName + &quot;\Downloads\geoMap.csv&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="077ba6ff57fed84b69461178692ba6b4.png" Selector="&lt;html app='firefox.exe' title='Google Trends'/&gt;" Url="https://trends.google.com/trends/?geo=US" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

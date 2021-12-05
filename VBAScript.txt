@@ -1,0 +1,16 @@
+Sub ModifyFile()
+    
+   Range("A1").Value = "Top 10 interested cities"
+   Range("A1").Font.Bold = True
+
+   LastRow = Range("A" & Rows.Count).End(xlUp).Row
+   Worksheets(1).Rows("14" & ":" & LastRow).Delete
+   
+   Worksheets(1).Rows("3").Delete
+   
+   Worksheets(1).Columns("A").Replace _
+        What:=",*", Replacement:="", _
+        SearchOrder:=xlByColumns, MatchCase:=True
+
+End Sub
+
