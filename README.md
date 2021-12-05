@@ -1,4 +1,8 @@
-### Documentation is included in the Documentation folder ###
+### Videorecording, documentation and output report of the robot is included in the Materials folder ###
+
+### Why did I use Mozilla Firefox browser? ### 
+Unfortunately, my corporate account is blocking UiPath extensions for Google Chrome and Microsoft Edge browsers and Google Trends website no longer works in Internet Explorer.
+Mozilla Firefox the only browser in which I was able to get an UiPath extensions.
 
 [REFrameWork Documentation](https://github.com/UiPath/ReFrameWork/blob/master/Documentation/REFramework%20documentation.pdf)
 
